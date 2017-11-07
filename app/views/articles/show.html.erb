@@ -1,0 +1,8 @@
+<h1>Here is your article</h1>
+
+  <h2><%= "#{@article.title} - "%> <%= link_to "edit", edit_article_path(@article) %> <%= link_to "destroy", article_path(@article), method: "delete" %></h2>
+  <p>------------------------------------------------------------------------</p>
+  <%= @article.content.html_safe %>
+<h3><%= link_to "Back", root_path %></h3>
+
+

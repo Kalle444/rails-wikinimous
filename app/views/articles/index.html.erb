@@ -1,0 +1,11 @@
+<h1>Here are all articles</h1>
+<h3><%= link_to "Write a new article", new_article_path %></h3>
+
+<% @articles.each do |article| %>
+  <%= link_to article_path(article) do %>
+    <h3> <%= article.title %></h3>
+  <% end %>
+  <h4><%= article.content.truncate_words(20).html_safe %></h4>
+<% end %>
+
+
